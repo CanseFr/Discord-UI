@@ -1,0 +1,28 @@
+<div class="main-sous-menu">
+    <div class="sous-menu">
+        <div class="scroll-list-badge" >
+            <br>
+          <ng-container *ngIf="listChannel | async as list">
+              <app-badge-channel
+                  (click)="getIndexBadgeSelected(index,info.id);offBg()"
+                  [indexParent]="giveIndexBadgeSelected"
+                  [indexInfo]="info.id"
+                  [titreBadge]="info.name" *ngFor="let info of list; let index = index">
+              </app-badge-channel>
+          </ng-container>
+
+        </div>
+        <p  class="add">+</p>
+    </div>
+    <div class="affiche-selected-sous-menu">
+      <div class="div-affich-click">
+        <ng-container *ngIf="bg">
+          <img  class="img-no-select-menu" src="https://www.ifa-formation.fr/wp-content/uploads/2021/02/MNS.jpg.png" />
+        </ng-container>
+
+        <ng-container>
+          <router-outlet *ngIf="!bg"></router-outlet>
+        </ng-container>
+      </div>
+    </div>
+</div>

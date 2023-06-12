@@ -1,0 +1,14 @@
+<div class="tab-container">
+
+<!--    <ng-container *ngIf="!bool">-->
+<!--        <div>-->
+<!--              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--      </div>-->
+<!--        <mat-spinner  style="margin:0 auto;" class="custom-spinner" ></mat-spinner>-->
+<!--    </ng-container>-->
+
+    <ng-container *ngIf="listUser$ | async as users">
+        <app-tab-user [AllUser]="users" ></app-tab-user>
+    </ng-container>
+
+</div>

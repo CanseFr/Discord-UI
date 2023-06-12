@@ -1,0 +1,7 @@
+<div class="tab-container">
+    <ng-container *ngIf="nameGroupe | async as name">
+        <ng-container *ngIf="listUser | async as list">
+            <app-tab-groupe [listUser]="list"  [nameGroupe]="name" ></app-tab-groupe>
+        </ng-container>
+    </ng-container>
+</div>

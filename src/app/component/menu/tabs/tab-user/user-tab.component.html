@@ -1,0 +1,106 @@
+ <div class="div-main-tab-user">
+
+        <br><h1><b>Utilisateurs</b></h1><br>
+
+        <!--        DROP DOWN FEEDBACK IMPORT CSV OK-->
+        <ng-container *ngIf=" feedBackCsvImport | async as feedBack">
+          <div *ngIf="feedBack == 1 ">
+              <p>Ok</p>
+          </div>
+          <div *ngIf="feedBack == -1 ">
+              <p>Bite</p>
+          </div>
+        </ng-container>
+
+        <!--        DROP DOWN FEEDBACK IMPORT CSV KO-->
+
+
+
+        <div class="top-search-add">
+          <div class="search-section">
+              <mat-form-field>
+                  <mat-label>Rechercher ...</mat-label>
+                  <input  matInput (keyup)="applyFilter($event)" placeholder="Ex. Julien" #input>
+              </mat-form-field>
+          </div>
+          <div class="add-section">
+            <button  class="add" mat-icon-button [matMenuTriggerFor]="menuMainUser" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+                <mat-menu  #menuMainUser="matMenu">
+                  <button (click)="addUser()"  mat-menu-item>
+                    <mat-icon >person_add</mat-icon>
+                    <span class="add-option">Ajouter</span>
+                  </button>
+                  <button (click)="importUser()"  mat-menu-item >
+                    <mat-icon>publish</mat-icon>
+                    <span class="add-option">Importer</span>
+                  </button>
+                </mat-menu>
+          </div>
+
+        </div>
+
+        <!-- LOAD BAR IMPORT CSV-->
+
+        <ng-container *ngIf=" feedBackCsvImport | async as feedBack">
+              <ng-container *ngIf="feedBack == 2">
+                <mat-progress-bar  mode="indeterminate"></mat-progress-bar>
+              </ng-container>
+        </ng-container>
+
+        <div class="scroller">
+            <div class="mat-elevation-z8 table ">
+
+                <table mat-table [dataSource]="dataSource" matSort>
+
+                    <ng-container matColumnDef="{{displayedColumns[0]}}">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{nameColumns[0]}} </th>
+                        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="{{displayedColumns[1]}}">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{nameColumns[1]}} </th>
+                        <td mat-cell *matCellDef="let row"> {{row.firstname}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="{{displayedColumns[2]}}">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{nameColumns[2]}} </th>
+                        <td mat-cell *matCellDef="let row"> {{row.lastname}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="{{displayedColumns[3]}}">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{nameColumns[3]}} </th>
+                        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="{{displayedColumns[4]}}" >
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{nameColumns[4]}} </th>
+                        <td mat-cell *matCellDef="let row">
+                            <!--    BOUTTON MODIFIER USER       -->
+                            <span mat-button (click)="modifyUser(row.id,row.lastname,row.firstname, row.email)"  class="material-symbols-outlined option">
+                                manage_accounts
+                            </span>&nbsp;
+                            <!--    BOUTTON DELETE USER       -->
+                            <span mat-button (click)="deleteUser(row.id,row.lastname,row.firstname)" class="material-symbols-outlined trash">
+                                delete
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="5">Aucun résultat pour votre recherche "{{input.value}}"</td>
+                    </tr>
+                </table>
+
+    <!--          <mat-paginator [pageSizeOptions]="[10]" aria-label="Select page of users"></mat-paginator>-->
+            </div>
+        </div>
+
+
+      </div>
+
+
+

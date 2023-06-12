@@ -1,0 +1,28 @@
+<div class="main-container">
+
+  <div class="div-option">
+
+      <div>
+        <br>
+        <app-main-badge-option
+          (click)="getIndexBadgeSelected(index); offBg()"
+          [pictoBadge]="info.picto"
+          [indexParent]="giveIndexBadgeSelected"
+          [indexInfo]="info.indexInfo"
+          [titreBadge]="info.title" *ngFor="let info of listInfoBadge; let index = index">
+        </app-main-badge-option>
+      </div>
+
+  </div>
+  <div class="div-affich-click">
+<!--    <ng-container *ngIf="bg">-->
+<!--      <img  class="img-no-select-menu" src="https://www.ifa-formation.fr/wp-content/uploads/2021/02/MNS.jpg.png" />-->
+<!--    </ng-container>-->
+
+    <ng-container>
+      <router-outlet ></router-outlet>
+<!--      <router-outlet *ngIf="!bg"></router-outlet>-->
+    </ng-container>
+  </div>
+
+</div>

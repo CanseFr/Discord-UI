@@ -1,0 +1,23 @@
+<button  class="main-badge ripple" [class.darker]="indexInfo == indexParent">
+  <div class="top-badge">
+    <div class="picto">
+            <span class="material-symbols-outlined">
+                  people
+            </span>
+    </div>
+    <div class="bottom-badge">
+      <h4  >{{titreBadge}}</h4>
+    </div>
+  </div>
+
+  <ng-container *ngIf="indexInfo == indexParent">
+
+    <div class="arrow-container">
+            <span class="material-symbols-outlined">
+                  chevron_right
+            </span>
+    </div>
+
+  </ng-container>
+
+</button>

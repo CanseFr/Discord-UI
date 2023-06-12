@@ -1,0 +1,96 @@
+.main-container-chat{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.option-left{
+  background-color: var(--color-menu);
+  width: 20%;
+  height: 100%;
+}
+
+.middle-chat{
+  width: 60%;
+  height: 100%;
+}
+
+.option-right{
+  background-color: var(--color-menu);
+  width: 20%;
+  height: 100%;
+}
+
+// _____________User liste gauche
+.scroll-list-user{
+  margin-top: 10px;
+  height: 66em;
+  overflow: scroll;
+  scrollbar-width: thin;
+}
+
+// CHAT MIDDLE
+.tab-container{
+  background-color: var(--color-bg-primary-tab);
+  border-radius: 15px;
+  height: 95%;
+  width: 95%;
+  margin: auto;
+  margin-top: 1%;
+  box-shadow: var(--shadow-box-darker);
+  display: flex;
+  flex-direction: column;
+}
+
+.title-chat-txt{
+  margin: auto;
+  text-align: center;
+}
+
+.top-title-chat{
+  width: 90%;
+  height: 5vh;
+  background-color: var(--color-bg-badgebg-light);
+  border-radius: 15px;
+   box-shadow: var(--shadow-box-darker);
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.middle-chat-display-message{
+  width: 90%;
+  height: 10vh;
+  background-color: var(--color-bg-badgebg-light);
+  border-radius: 15px;
+   box-shadow: var(--shadow-box-darker);
+  margin: auto;
+  margin-bottom: 10px;
+  height: 74%;
+}
+.bottom-chat-input{
+  width: 90%;
+  height: 10vh;
+  background-color: var(--color-bg-badgebg-light);
+  border-radius: 15px;
+   box-shadow: var(--shadow-box-darker);
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  span{
+    margin: auto;
+  }
+  input{
+    height: 80%;
+    border-radius: 15px;
+    margin: auto;
+    width: 90%;
+  }
+}
+
+
+
+
+
+

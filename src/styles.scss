@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+:root{
+  --color-primary : #151b36;          //  var(--color-primary);
+  --color-primary-low : black;        //  var(--color-primary-low);
+  --color-secondary : #FF9763;        //  var(--color-secondary);
+
+  --color-menu: #3E4160;              //  var(--color-menu);
+  --color-menu-secondary : #818296;   //  var(--color-secondary);
+
+  --color-secondary-trans : rgba(255, 151, 99, 0.46);  //  var(--color-secondary-trans);
+
+  --color-bg-primary : #ffffff;       //  var(--color-bg-primary);
+  --color-bg-secondary : #b2b2b2;     //  var(--color-bg-secondary);
+  --color-bg-primary-tab : rgba(178, 178, 178, 0.51);  //  var(--color-bg-primary-tab);
+  --color-bg-badge : #ced5da;         //  var(--color-bg-badge);
+  --color-bg-badgebg-light: #f7f9fc;//var(--color-bg-badgebg-light)
+
+  --shadow-box : 10px 5px 5px rgba(0, 0, 0, 0.2);         //  var(--shadow-box);
+  --shadow-box-darker : 10px 5px 5px rgba(0, 0, 0, 0.57); //  var(--shadow-box-darker);
+
+  --color-icon : #c0c0c0;               //  var(--color-icon);
+
+  --color-trash : #c98a8a;              //  var(--color-trash);
+  --color-option : #62698c;             //  var(--color-option);
+  --color-add : rgba(11, 11, 14, 0.8);  //  var(--color-add);
+
+  // RIPPLE
+  // hoover
+  --color-ripple-hoover : #c9cacb radial-gradient(circle, transparent 1%, #ffffff 1%) center/15000%;;             //  var(--color-ripple-hoover);
+  // active
+  --color-ripple-active : rgb(255, 235, 225);             //  var(--color-ripple-active);
+
+  // Name DropDownMenu Home
+  --color-DropDownMenuName : #ff8e57;        //  var(--color-DropDownMenuName);
+
+}
+
+
+.danger{
+  color: var(--color-trash);
+}
+
+
+
+html, body { height: 100%;width: 100% }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: var(--color-primary)  !important;}

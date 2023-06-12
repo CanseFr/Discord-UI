@@ -1,0 +1,66 @@
+<div class="container-main">
+
+      <div class="container-left">
+
+          <div class="inner-left-top scroll-list-badge">
+            <ng-container *ngIf="listChannelChat | async as list" >
+              <div (click)="redirect(item.id)" class="groupe-chat-icon" *ngFor="let item of list">
+                <mat-icon  fontIcon="groups"></mat-icon>
+                <p>{{item.name}}</p>
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="inner-left-bottom">
+
+              <ng-container  *ngIf="role">
+                  <mat-icon  (click)="offBg()" [routerLink]="'/home/admin/option'" class="icon-size setting" fontIcon="settings"></mat-icon>
+              </ng-container>
+
+              <mat-icon (click)="onBg()"  [routerLink]="'/home/user'" class="icon-size profil" fontIcon="account_circle"></mat-icon>
+
+          </div>
+
+
+      </div>
+
+      <div class="container-right">
+          <div class="container-inner-right-top">
+
+            <!--     TOP BAR AVATAR ET DECO  -->
+            <div class="profil-deco ">
+              <button class="circle "  [matMenuTriggerFor]="menu" type="button" >
+                <span class="circle__content">&nbsp;<b>{{nameUserForBadge}}</b></span>
+              </button>
+              <!-- OPTION USER DECO & Change Mot de passe-->
+              <mat-menu #menu="matMenu">
+                <div class="toggle-name">
+                    <div class="name-dropdown"><p><b>{{firstname}}</b></p>&nbsp;<p>{{lastname}}</p></div>
+                    <mat-slide-toggle (click)="lightMode()">Mode : {{lighting}}</mat-slide-toggle>
+                </div>
+                <button mat-menu-item [routerLink]="['/home/details']">
+                  <mat-icon>settings</mat-icon>
+                  <span>Option</span>
+                </button>
+                <button mat-menu-item (click)="deconect()">
+                  <mat-icon>power_settings_new</mat-icon>
+                  <span>Deconnexion</span>
+                </button>
+              </mat-menu>
+            </div>
+
+          </div>
+          <div class="container-inner-right-bottom">
+     <!--       <ng-container *ngIf="bg">
+                <img  class="img-no-select-menu" src="https://www.ifa-formation.fr/wp-content/uploads/2021/02/MNS.jpg.png" />
+            </ng-container>-->
+
+            <ng-container>
+                <router-outlet></router-outlet>
+<!--                <router-outlet *ngIf="!bg"></router-outlet>-->
+            </ng-container>
+          </div>
+      </div>
+
+</div>
+

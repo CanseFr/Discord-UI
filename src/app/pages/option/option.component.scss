@@ -1,0 +1,46 @@
+.main-container{
+  height: 35%;
+  width: 45%;
+  border-radius: 15px;
+  border: none;
+  background-color: #F0F8FFFF;
+  margin: auto;
+  margin-top: 10%;
+
+  padding-top:3%;
+  padding-bottom:3%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  box-shadow: 10px 5px 5px #3E4160FF;
+}
+
+.row-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.h-clickable{
+  cursor: pointer;
+}
+
+label {
+  color: white;
+}
+
+h2:hover{
+  color: #676767;
+}
+
+// BACK HOME
+.back-home{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white
+}
+
+

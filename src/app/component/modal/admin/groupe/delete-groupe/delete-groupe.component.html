@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Souhaitez vous supprimer ce groupe</h2>
+<mat-dialog-content class="mat-typography">
+
+  <form (ngSubmit)="onSubmit()">
+
+    <h1 style="text-align: center; color: #FF9763">{{_name}}</h1>
+      <input hidden="hidden" value="{{_id}}" >
+
+
+    <mat-dialog-actions align="end">
+      <button at-stroked-button color="primary" mat-button mat-dialog-close>Annuler</button>
+      <button type="submit"  at-stroked-button color="warn"  mat-button [mat-dialog-close]="true" cdkFocusInitial>Supprimer</button>
+    </mat-dialog-actions>
+
+  </form>
+
+</mat-dialog-content>

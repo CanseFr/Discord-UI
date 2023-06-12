@@ -1,0 +1,14 @@
+.badge-user{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-badge);
+  border-radius: 15px;
+  width: 94%;
+  height: 6vh;
+  margin-bottom: 1vh;
+  margin-right: 3%;
+  margin-left: 3%;
+  box-shadow:  var(--shadow-box);
+  text-align: center;
+  vertical-align: auto;
+}

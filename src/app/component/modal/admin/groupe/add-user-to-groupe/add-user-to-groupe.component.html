@@ -1,0 +1,25 @@
+<ng-container *ngIf="listUserService | async as listUser">
+    <h2 mat-dialog-title>Ajouter un utilisateur</h2>
+    <mat-dialog-content class="mat-typography">
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="formulaire">
+
+        <mat-form-field>
+          <mat-label>Selectionner un utilisateur</mat-label>
+          <mat-select formControlName="idUser">
+            <mat-option *ngFor="let item of listUser" value="{{item.id}}">{{item.firstname}} {{item.lastname}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-dialog-actions align="end">
+          <button at-stroked-button color="warn" mat-button mat-dialog-close>Annuler</button>
+          <button type="submit"  at-stroked-button color="primary"  mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirmer</button>
+        </mat-dialog-actions>
+
+      </form>
+
+    </mat-dialog-content>
+</ng-container>
+
+
+

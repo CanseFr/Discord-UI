@@ -1,0 +1,63 @@
+// BADGE DESIGN
+
+.main-badge{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-bg-badge);
+  border-radius: 15px;
+  width: 94%;
+  height: 10vh;
+  margin-bottom: 1vh;
+  margin-right: 3%;
+  margin-left: 3%;
+
+  cursor: pointer;
+  box-shadow:  var(--shadow-box);
+}
+
+.top-badge{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.picto{
+  text-align: center;
+}
+
+.bottom-badge{
+  text-align: center;
+}
+
+h4{
+  font-weight: bold;
+  text-align: center;
+}
+
+.arrow-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.darker{
+  box-shadow: var(--shadow-box-darker);
+  background-color: var(--color-bg-badgebg-light);
+}
+
+
+/* Ripple effect */
+  .ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background : var(--color-ripple-hoover);
+  }
+  .ripple:active {
+    background-color : var(--color-ripple-active);
+    background-size: 100%;
+    transition: background 0s;
+  }
+  button{
+    border: none;
+  }

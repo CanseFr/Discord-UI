@@ -1,0 +1,45 @@
+.main-sous-menu{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.sous-menu{
+  background-color: var(--color-menu-secondary);
+  height: 100%;
+  width: 18%;
+}
+.affiche-selected-sous-menu{
+  background-color: var(--color-bg-primary);
+  height: 100%;
+  width: 80%;
+}
+
+// Image Background
+.img-no-select-menu{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-list-badge{
+  height: 62.5em;
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color:   silver  var(--color-menu-secondary);
+}
+
+.add{
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin: auto;
+}
+
+
+
+

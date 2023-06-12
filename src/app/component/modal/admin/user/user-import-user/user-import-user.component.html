@@ -1,0 +1,31 @@
+<h2 mat-dialog-title style="text-align: center">Importer des utilisateurs</h2>
+
+
+
+<mat-dialog-content class="mat-typography">
+    <div class="info-feedservice center-item-feedback" >
+      <!--INFO IMPORT-->
+      <mat-accordion class="example-headers-align" multi>
+          <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                    <mat-panel-description>
+                      <mat-icon>info</mat-icon>
+                    </mat-panel-description>
+              </mat-expansion-panel-header>
+              <b><p style="color: #FF9763">Attention, pour l'import d'utilisateur sous fichier CSV :</p></b><br>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;- Respecter l'ordre des valeurs : Nom, Prenom, Email</p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;- Extension : .csv</p>
+          </mat-expansion-panel>
+      </mat-accordion><br><br>
+      <!-- LABEL & INPUT IMPORT FICHIER -->
+    <div style="text-align: center">
+      <b><p style="color: black">CSV :&nbsp;&nbsp;</p></b>
+      <input type="file" class="file-input"  (change)="onFileSelected($event)" #fileUpload>
+    </div>
+    </div>
+</mat-dialog-content>
+<!--BUTTON-->
+<mat-dialog-actions align="end">
+  <button mat-button color="warn" mat-dialog-close>Annuler</button>
+  <button (click)="parseCsv()"   disabled="{{acceptFile?true:false}}"  color="primary"   mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirmer</button>
+</mat-dialog-actions>

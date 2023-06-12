@@ -1,0 +1,49 @@
+<div class="main-container-chat">
+
+    <div class="option-left ">
+
+
+          <div class="scroll-list-user">
+            <ng-container  *ngIf="listUserOfChannel | async as list">
+              <div  *ngFor="let item of list">
+
+                <app-badge-user [firstname]="item.firstname" [lastname]="item.lastname" ></app-badge-user>
+
+              </div>
+            </ng-container>
+
+
+          </div>
+
+    </div>
+
+    <div class="middle-chat">
+        <ng-container *ngIf="nameGroupe | async as name">
+
+          <div class="tab-container">
+
+              <div class="top-title-chat">
+                 <h1 class="title-chat-txt"><b>{{name.name}}</b></h1>
+              </div>
+              <div class="middle-chat-display-message">
+
+              </div>
+              <div class="bottom-chat-input">
+                <input  matInput>
+                <span class="material-symbols-outlined">
+                    send
+                </span>
+              </div>
+
+
+          </div>
+
+
+        </ng-container>
+    </div>
+
+
+    <div class="option-right">
+    </div>
+
+</div>

@@ -1,0 +1,38 @@
+
+    <div class="container-fluid card login-container body-input">
+
+        <br>
+        <h1><b>Connexion</b></h1>
+        <br>
+
+        <div class="alert alert-danger" role="alert" *ngIf="errorMessages.length">
+          <p *ngFor="let msg of errorMessages">{{msg}}</p>
+        </div>
+
+      <div class="container-input-label">
+          <div class="mail">
+            <label for="login" class="form-label txt-lbl">Adresse e-mail</label>
+            <input [(ngModel)]="authRequest.email" type="email" class="form-control" id="login" placeholder="name@example.com">
+          </div>
+
+          <div class="pass">
+            <label for="password" class="form-label txt-lbl">Mot de passe</label>
+            <input [(ngModel)]="authRequest.password" type="password" class="form-control" id="password" placeholder="Password"/>
+          </div>
+      </div>
+
+        <div class="d-flex justify-content-center mb-3">
+          <button (click)="log()" type="button" class="btn btn-validation ">
+            <em class="fas fa-sign-in-alt">&nbsp;Connexion</em>
+          </button>
+        </div>
+
+        <div class="d-flex justify-content-center mb-3 btn-bottom">
+          <button type="button" class="btn btn-link">Mot de passe oublié ? </button>
+          <button (click)="redirectToRegister()" type="button" class="btn btn-link">Creer un compte ? </button>
+        </div>
+
+
+
+    </div>
+

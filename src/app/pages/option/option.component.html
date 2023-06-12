@@ -1,0 +1,35 @@
+    <div class="back-home">
+        <span  class="material-symbols-outlined">
+            house
+        </span>
+
+        <span  style="cursor: pointer" routerLink="/home/user" class="material-symbols-outlined">
+            keyboard_backspace
+        </span>
+    </div>
+
+<div class="main-container">
+  <h1><b>Modification</b></h1>
+  <p>&nbsp;</p>
+  <div class="row-container">
+          <span class="material-symbols-outlined">
+              password
+          </span>
+    <h2 (click)="modifyPassword()" class="h-clickable" data-bs-toggle="modal" data-bs-target="#modalPassword">&nbsp;&nbsp;Mot de passe</h2>
+  </div>
+  <!-- // MODAL PASSWORD-->
+  <div class="row-container">
+          <span class="material-symbols-outlined">
+              alternate_email
+          </span>
+    <h2 (click)="modifyEmail()" class="h-clickable" data-bs-toggle="modal" data-bs-target="#modalMail">&nbsp;&nbsp;Adresse email</h2>
+  </div>
+  <!-- // MODAL MAIL-->
+    <div class="row-container">
+          <span class="material-symbols-outlined">
+              settings_accessibility
+          </span>
+    <h2 (click)="modifyInfoPerso()" class="h-clickable" data-bs-toggle="modal" data-bs-target="#modalPerso">&nbsp;&nbsp;Info personnel</h2>
+    <!-- // MODAL PERSO-->
+  </div>
+</div>

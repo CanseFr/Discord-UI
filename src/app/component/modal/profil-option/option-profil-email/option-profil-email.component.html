@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Modifier adresse mail</h2>
+<mat-dialog-content class="mat-typography">
+
+
+  <form >
+<!--    <form (ngSubmit)="onSubmit()" [formGroup]="formulaire">-->
+
+    <mat-form-field>
+      <mat-label>Email actuel</mat-label>
+      <input formControlName="firstname" matInput>
+<!--      <mat-error *ngIf="formulaire.controls['firstname'].hasError('minlength')">Nom trop court (minimum :{{ formulaire.get('firstname')?.getError('minlength').requiredLength }})</mat-error>-->
+<!--      <mat-error *ngIf="formulaire.controls['firstname'].hasError('maxlength')">Nom trop long (maximum :{{ formulaire.get('firstname')?.getError('maxlength').requiredLength }})</mat-error>-->
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Nouvel email</mat-label>
+      <input formControlName="lastname" matInput>
+<!--      <mat-error *ngIf="formulaire.controls['lastname'].hasError('minlength')">Prénom trop court (minimum :{{ formulaire.get('lastname')?.getError('minlength').requiredLength }})</mat-error>-->
+<!--      <mat-error *ngIf="formulaire.controls['lastname'].hasError('maxlength')">Prénom trop long (maximum :{{ formulaire.get('lastname')?.getError('maxlength').requiredLength }})</mat-error>-->
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Confirmation email</mat-label>
+      <input formControlName="email" matInput>
+<!--      <mat-error *ngIf="formulaire.controls['email'].hasError('email')">Veuillez respecter le format mail</mat-error>-->
+    </mat-form-field>
+
+    <mat-dialog-actions align="center">
+      <button mat-stroked-button color="primary" mat-dialog-close>Annuler</button>
+<!--      <button type="submit" [disabled]="!formulaire.valid" mat-stroked-button color="warn" [mat-dialog-close]="true" cdkFocusInitial>Modifier</button>-->
+      <button type="submit" [disabled]="" mat-stroked-button color="warn" [mat-dialog-close]="true" cdkFocusInitial>Modifier</button>
+    </mat-dialog-actions>
+
+  </form>
+</mat-dialog-content>

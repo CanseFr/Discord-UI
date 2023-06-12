@@ -1,0 +1,9 @@
+<!--<div class="tab-container">-->
+    <ng-container *ngIf="nameChannel | async as name">
+        <ng-container *ngIf="listAllUserOfChannel | async as listUserChannel">
+          <ng-container *ngIf="listAllGroupesOfChannel | async as listGroupeChannel">
+              <app-tab-channel [nameChannel]="name.name" [listUserOfChannel]="listUserChannel" [listGroupeOfChannel]="listGroupeChannel" ></app-tab-channel>
+          </ng-container>
+        </ng-container>
+    </ng-container>
+<!--</div>-->

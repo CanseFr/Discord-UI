@@ -1,0 +1,84 @@
+//______TITLE
+h1{
+  text-align: center;
+}
+
+span{
+  cursor: pointer;
+}
+
+//_________________TOP TAB SEARCH AND ADD USER
+// MAIN
+.top-search-add{
+  display: flex;
+  flex-direction: row;
+}
+// SEARCH
+.search-section{
+  width: 93%;
+}
+
+
+// BUTTON ADD
+.add{
+  color: var(--color-add);
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 15px;
+}
+.add:hover{
+  color: var(--color-secondary);
+}
+
+.add-section{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.add-option:hover{
+  color: var(--color-secondary);
+}
+
+//________TAB
+table {
+  width: 100%;
+  height: 60%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+// Icon Tab
+.option{
+  color: var(--color-option);
+}
+.trash{
+  color: var(--color-trash);
+}
+
+
+//_______CONTAINER TAB
+.div-main-tab-user{
+  width: 90%;
+  margin: auto;
+
+}
+
+// SCROLL
+.scroller {
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-color:  var(--color-secondary-trans) var(--color-bg-secondary);
+  scrollbar-width: thin;
+  height: 650px;
+}
+
+

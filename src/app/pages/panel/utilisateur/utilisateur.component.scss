@@ -1,0 +1,21 @@
+.tab-container{
+  background-color: var(--color-bg-primary-tab);
+  border-radius: 15px;
+  height: 95%;
+  width: 95%;
+  margin: auto;
+  margin-top: 1%;
+  box-shadow: var(--shadow-box-darker);
+}
+
+:host ::ng-deep .custom-spinner circle{
+  stroke: var(--color-secondary);
+}
+
+.mat-spinner {
+  position: relative;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+

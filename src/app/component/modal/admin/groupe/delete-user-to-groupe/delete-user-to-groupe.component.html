@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Souhaitez vous supprimer cet utilisateur du groupe {{_nameGroupe}}</h2>
+<mat-dialog-content class="mat-typography">
+
+  <form (ngSubmit)="onSubmit()">
+
+    <h1 style="text-align: center; color: #FF9763">{{_firstname}} {{_lastname}}</h1>
+
+    <mat-dialog-actions align="end">
+      <button at-stroked-button color="primary" mat-button mat-dialog-close>Annuler</button>
+      <button type="submit"  at-stroked-button color="warn"  mat-button [mat-dialog-close]="true" cdkFocusInitial>Supprimer</button>
+    </mat-dialog-actions>
+
+  </form>
+
+</mat-dialog-content>

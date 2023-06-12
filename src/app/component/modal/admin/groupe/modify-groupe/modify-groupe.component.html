@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Creer un groupe</h2>
+<mat-dialog-content class="mat-typography">
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="formulaire">
+    <mat-form-field>
+      <mat-label>Nom</mat-label>
+      <input formControlName="name" matInput>
+      <mat-error *ngIf="formulaire.controls['name'].hasError('minlength')">Nom trop court (minimum :{{ formulaire.get('name')?.getError('minlength').requiredLength }})</mat-error>
+      <mat-error *ngIf="formulaire.controls['name'].hasError('maxlength')">Nom trop long (maximum :{{ formulaire.get('name')?.getError('maxlength').requiredLength }})</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Selectionner une Visibilité</mat-label>
+      <mat-select [(value)]="selectedVisibility">
+        <mat-option *ngFor="let item of optionsVisibility " value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-dialog-actions align="end">
+      <button at-stroked-button color="warn" mat-button mat-dialog-close>Annuler</button>
+      <button type="submit"  at-stroked-button color="primary" [disabled]="!formulaire.valid" mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirmer</button>
+    </mat-dialog-actions>
+
+  </form>
+
+</mat-dialog-content>

@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Ajouter un utilisateur</h2>
+<mat-dialog-content class="mat-typography">
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="formulaire">
+    <mat-form-field>
+      <mat-label>Nom</mat-label>
+      <input formControlName="firstname" matInput>
+      <mat-error *ngIf="formulaire.controls['firstname'].hasError('minlength')">Nom trop court (minimum :{{ formulaire.get('firstname')?.getError('minlength').requiredLength }})</mat-error>
+      <mat-error *ngIf="formulaire.controls['firstname'].hasError('maxlength')">Nom trop long (maximum :{{ formulaire.get('firstname')?.getError('maxlength').requiredLength }})</mat-error>
+    </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Prénom</mat-label>
+              <input formControlName="lastname" matInput>
+              <mat-error *ngIf="formulaire.controls['lastname'].hasError('minlength')">Prénom trop court (minimum :{{ formulaire.get('lastname')?.getError('minlength').requiredLength }})</mat-error>
+              <mat-error *ngIf="formulaire.controls['lastname'].hasError('maxlength')">Prénom trop long (maximum :{{ formulaire.get('lastname')?.getError('maxlength').requiredLength }})</mat-error>
+            </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput>
+      <mat-error *ngIf="formulaire.controls['email'].hasError('email')">Veuillez respecter le format mail</mat-error>
+    </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Selectionner Groupe</mat-label>
+              <mat-select [(value)]="selectedGroupe">
+        <!--        <mat-option value="">Aucun</mat-option>-->
+                <mat-option *ngFor="let item of optionsGroupe " value="{{item}}">{{item}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Selectionner Channel</mat-label>
+      <mat-select [(value)]="selectedChannel">
+<!--        <mat-option value="">Aucun</mat-option>-->
+        <mat-option *ngFor="let item of optionsChannel " value="{{item}}">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-dialog-actions align="end">
+      <button at-stroked-button color="warn" mat-button mat-dialog-close>Annuler</button>
+      <button type="submit"  at-stroked-button color="primary" [disabled]="!formulaire.valid" mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirmer</button>
+    </mat-dialog-actions>
+
+  </form>
+
+</mat-dialog-content>
+

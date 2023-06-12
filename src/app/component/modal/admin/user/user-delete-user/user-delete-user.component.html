@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Supprimer un utilisateur</h2>
+<mat-dialog-content class="mat-typography">
+    <div>
+      <h2>{{_firstname}}</h2>
+      <h3>{{_lastname}}</h3>
+    </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-stroked-button color="primary" mat-dialog-close>Annuler</button>
+  <button (click)="deleteUser(_id)"  mat-stroked-button color="warn" [mat-dialog-close]="true" cdkFocusInitial>Confirmer</button>
+</mat-dialog-actions>
+

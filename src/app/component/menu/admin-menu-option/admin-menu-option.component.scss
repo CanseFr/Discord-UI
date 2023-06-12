@@ -1,0 +1,27 @@
+.main-container{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.div-option{
+  background-color: var(--color-menu);
+  width: 19%;
+  height: 100%;
+}
+
+.div-affich-click{
+  width: 100%;
+  height: 100%;
+}
+
+// Image Background
+.img-no-select-menu{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.4);
+}
+
