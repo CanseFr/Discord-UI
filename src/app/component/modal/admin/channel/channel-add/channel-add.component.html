@@ -1,16 +1,16 @@
-<h2 mat-dialog-title>Modifier le groupe</h2>
+<h2 style="text-align: center" mat-dialog-title>Créer un channel</h2>
 <mat-dialog-content class="mat-typography">
 
   <form (ngSubmit)="onSubmit()" [formGroup]="formulaire">
     <mat-form-field>
       <mat-label>Nom</mat-label>
-      <input formControlName="name" matInput>
-      <mat-error *ngIf="formulaire.controls['name'].hasError('minlength')">Nom trop court (minimum :{{ formulaire.get('name')?.getError('minlength').requiredLength }})</mat-error>
-      <mat-error *ngIf="formulaire.controls['name'].hasError('maxlength')">Nom trop long (maximum :{{ formulaire.get('name')?.getError('maxlength').requiredLength }})</mat-error>
+      <input formControlName="nom" matInput>
+      <mat-error *ngIf="formulaire.controls['nom'].hasError('minlength')">Nom trop court (minimum :{{ formulaire.get('nom')?.getError('minlength').requiredLength }})</mat-error>
+      <mat-error *ngIf="formulaire.controls['nom'].hasError('maxlength')">Nom trop long (maximum :{{ formulaire.get('nom')?.getError('maxlength').requiredLength }})</mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Selectionner une Visibilité</mat-label>
+      <mat-label>Selectionner Channel</mat-label>
       <mat-select [(value)]="selectedVisibility">
         <mat-option *ngFor="let item of optionsVisibility " value="{{item}}">{{item}}</mat-option>
       </mat-select>
@@ -24,3 +24,4 @@
   </form>
 
 </mat-dialog-content>
+

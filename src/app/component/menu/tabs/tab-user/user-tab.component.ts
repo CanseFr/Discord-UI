@@ -110,5 +110,9 @@ export class UserTabComponent implements AfterViewInit,OnInit, OnChanges{
     const dialogRef = this.dialog.open(UserImportUserComponent);
   }
 
+
+  initFeeback() {
+    this.feedBackCsvImport.next(0)
+  }
 }
 

@@ -4,17 +4,20 @@
 
         <!--        DROP DOWN FEEDBACK IMPORT CSV OK-->
         <ng-container *ngIf=" feedBackCsvImport | async as feedBack">
-          <div *ngIf="feedBack == 1 ">
-              <p>Ok</p>
-          </div>
-          <div *ngIf="feedBack == -1 ">
-              <p>Bite</p>
+          <div  class="container-icon-feedback">
+              <div (click)="initFeeback()" *ngIf="feedBack == 1 ">
+                <span  class="material-symbols-outlined icon-size ok">
+                     check_circle
+                </span>
+              </div>
+              <div (click)="initFeeback()"  *ngIf="feedBack == -1 ">
+                <span  class="material-symbols-outlined icon-size ko">
+                    dangerous
+                </span>
+              </div>
           </div>
         </ng-container>
-
         <!--        DROP DOWN FEEDBACK IMPORT CSV KO-->
-
-
 
         <div class="top-search-add">
           <div class="search-section">

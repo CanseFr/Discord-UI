@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ChannelService} from "../../../../service/__services/channel/channel.service";
+import {ChannelAddComponent} from "../../../modal/admin/channel/channel-add/channel-add.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-sous-menu-channel',
@@ -19,7 +21,7 @@ export class SousMenuChannelComponent implements OnInit{
   urlChannelSelected = '/home/admin/option/smc/channel?id='
   giveIndexBadgeSelected?:number;
 
-  constructor(private router:Router, private channelService: ChannelService) {}
+  constructor(private router:Router, private channelService: ChannelService,public dialog: MatDialog) {}
 
   listChannel = this.channelService.listChannel
   ngOnInit(): void {
@@ -36,5 +38,10 @@ export class SousMenuChannelComponent implements OnInit{
   offBg() {this.bg = false }
   onBg() {this.bg = true }
 
+  //__MODAL
+  //Creer Channel
+  createChannel() {
+    const dialogRef = this.dialog.open(ChannelAddComponent);
+  }
 
 }

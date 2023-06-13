@@ -81,4 +81,31 @@ td, th {
   height: 650px;
 }
 
+// FEEDBACK
+
+.icon-size {
+  font-size: 30px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.ko{
+  color: red;
+}
+.ok{
+  color: green;
+}
+
+.icon-size:hover, .ko:hover, ok:hover{
+  color: var(--color-secondary);
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+}
+.container-icon-feedback{
+  display: block;
+  flex-direction: column;
+  text-align: center;
+}
+
 

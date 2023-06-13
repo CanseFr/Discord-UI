@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Supprimer un utilisateur de ce groupe ?</h2>
+<mat-dialog-content class="mat-typography">
+  <div style="text-align: center">
+    <h2>{{_firstname}}</h2>
+    <h3>{{_lastname}}</h3>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-stroked-button color="primary" mat-dialog-close>Annuler</button>
+  <button (click)="deleteUser()"  mat-stroked-button color="warn" [mat-dialog-close]="true" cdkFocusInitial>Confirmer</button>
+</mat-dialog-actions>

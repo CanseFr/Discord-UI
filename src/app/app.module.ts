@@ -47,14 +47,18 @@ import {MatSelectModule} from "@angular/material/select";
 import { ChatComponent } from './pages/chat/chat.component';
 import {CdkListbox} from "@angular/cdk/listbox";
 import {BadgeUserComponent} from "./component/chat/badge-user/badge-user.component";
-import { AddChannelComponent } from './component/modal/admin/channel/add-channel/add-channel.component';
-import { AddUserToChannelComponent } from './component/modal/admin/channel/add-user-to-channel/add-user-to-channel.component';
 import { AddGroupeComponent } from './component/modal/admin/groupe/add-groupe/add-groupe.component';
 import { AddUserToGroupeComponent } from './component/modal/admin/groupe/add-user-to-groupe/add-user-to-groupe.component';
 import { DeleteUserToGroupeComponent } from './component/modal/admin/groupe/delete-user-to-groupe/delete-user-to-groupe.component';
 import { DeleteGroupeComponent } from './component/modal/admin/groupe/delete-groupe/delete-groupe.component';
-import { AddGroupeToChannelComponent } from './component/modal/admin/channel/add-groupe-to-channel/add-groupe-to-channel.component';
 import { ModifyGroupeComponent } from './component/modal/admin/groupe/modify-groupe/modify-groupe.component';
+import { ChannelAddComponent } from './component/modal/admin/channel/channel-add/channel-add.component';
+import { ChannelDeleteComponent } from './component/modal/admin/channel/channel-delete/channel-delete.component';
+import { ChannelModifyNameComponent } from './component/modal/admin/channel/channel-modify-name/channel-modify-name.component';
+import { ChannelUserAddComponent } from './component/modal/admin/channel/channel-user-add/channel-user-add.component';
+import { ChannelUserDeleteComponent } from './component/modal/admin/channel/channel-user-delete/channel-user-delete.component';
+import { ChannelGroupeAddComponent } from './component/modal/admin/channel/channel-groupe-add/channel-groupe-add.component';
+import { ChannelGroupeDeleteComponent } from './component/modal/admin/channel/channel-groupe-delete/channel-groupe-delete.component';
 
 
 @NgModule({
@@ -81,14 +85,18 @@ import { ModifyGroupeComponent } from './component/modal/admin/groupe/modify-gro
     OptionProfilInfopersoComponent,
     ChatComponent,
     BadgeUserComponent,
-    AddChannelComponent,
-    AddUserToChannelComponent,
     AddGroupeComponent,
     AddUserToGroupeComponent,
     DeleteUserToGroupeComponent,
     DeleteGroupeComponent,
-    AddGroupeToChannelComponent,
     ModifyGroupeComponent,
+    ChannelAddComponent,
+    ChannelDeleteComponent,
+    ChannelModifyNameComponent,
+    ChannelUserAddComponent,
+    ChannelUserDeleteComponent,
+    ChannelGroupeAddComponent,
+    ChannelGroupeDeleteComponent,
   ],
     imports: [
         BrowserModule,
