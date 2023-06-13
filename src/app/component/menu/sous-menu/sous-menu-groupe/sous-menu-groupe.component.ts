@@ -25,8 +25,8 @@ export class SousMenuGroupeComponent implements OnInit{
 
    getIndexBadgeSelected(index:number,indexInfo:number) {
       this.giveIndexBadgeSelected = index +1
-      this.router.navigateByUrl(this.urlRouteGroupeSelected + this.giveIndexBadgeSelected)
-     this.groupeService.getNameGroupeById(indexInfo)
+      this.router.navigateByUrl(this.urlRouteGroupeSelected + indexInfo)
+      this.groupeService.getNameGroupeById(indexInfo)
   }
 
   // BACK GROUND VIEW

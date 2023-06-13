@@ -1,7 +1,7 @@
 <div class="main-container-chat">
 
     <div class="option-left ">
-
+      <h2 style="text-align: center; color: #FF9763"><b>Membres</b></h2>
 
           <div class="scroll-list-user">
             <ng-container  *ngIf="listUserOfChannel | async as list">
@@ -18,6 +18,7 @@
     </div>
 
     <div class="middle-chat">
+
         <ng-container *ngIf="nameGroupe | async as name">
 
           <div class="tab-container">
@@ -25,14 +26,32 @@
               <div class="top-title-chat">
                  <h1 class="title-chat-txt"><b>{{name.name}}</b></h1>
               </div>
-              <div class="middle-chat-display-message">
+              <div class="middle-chat-display-message scroller" >
+
+                <ng-container  *ngIf="listMessage | async as listMessage">
+                  <br>
+
+                  <div class="message-container" *ngFor="let item of listMessage">
+
+                            <p class="user-post">&nbsp;&nbsp;&nbsp;&nbsp; <b>{{item.user.lastname}}</b> :</p>
+                            <p class="txt-post">  {{item.content}}</p>
+                            <p class="hour-txt"> {{item.sentAt[11]}}{{item.sentAt[12]}}h{{item.sentAt[14]}}{{item.sentAt[15]}}</p>
+
+                  </div>
+                  <br>
+                </ng-container>
 
               </div>
-              <div class="bottom-chat-input">
-                <input  matInput>
-                <span class="material-symbols-outlined">
-                    send
-                </span>
+              <div  class="bottom-chat-input">
+
+                <input [(ngModel)]="userSendText" placeholder="Votre texte ..." >
+                <button style="border: none; border-radius: 15px; background-color: white" (click)="getTextUserSending()" type="button">
+              <span class="material-symbols-outlined">
+                  send
+              </span>
+                </button>
+
+
               </div>
 
 
@@ -44,6 +63,18 @@
 
 
     <div class="option-right">
+
+      <div class="scroll-list-user">
+
+      <h2 style="text-align: center; color: #FF9763"><b>Fichiers partagés</b></h2>
+            <app-badge-document (click)="uploadFile()" [picto]="'picture_as_pdf'" [titreDoc]="'Maquette UX'" ></app-badge-document>
+            <app-badge-document (click)="uploadFile()" [picto]="'image'" [titreDoc]="'BackGround HomePage'" ></app-badge-document>
+            <app-badge-document (click)="uploadFile()" [picto]="'analytics'" [titreDoc]="'Regles metier app'" ></app-badge-document>
+
+      </div>
+
     </div>
 
 </div>
+
+

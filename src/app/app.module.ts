@@ -59,6 +59,8 @@ import { ChannelUserAddComponent } from './component/modal/admin/channel/channel
 import { ChannelUserDeleteComponent } from './component/modal/admin/channel/channel-user-delete/channel-user-delete.component';
 import { ChannelGroupeAddComponent } from './component/modal/admin/channel/channel-groupe-add/channel-groupe-add.component';
 import { ChannelGroupeDeleteComponent } from './component/modal/admin/channel/channel-groupe-delete/channel-groupe-delete.component';
+import { BadgeDocumentComponent } from './component/chat/badge-document/badge-document.component';
+import { ChatDownloadFileComponent } from './component/modal/chat/chat-download-file/chat-download-file.component';
 
 
 @NgModule({
@@ -97,6 +99,8 @@ import { ChannelGroupeDeleteComponent } from './component/modal/admin/channel/ch
     ChannelUserDeleteComponent,
     ChannelGroupeAddComponent,
     ChannelGroupeDeleteComponent,
+    BadgeDocumentComponent,
+    ChatDownloadFileComponent,
   ],
     imports: [
         BrowserModule,

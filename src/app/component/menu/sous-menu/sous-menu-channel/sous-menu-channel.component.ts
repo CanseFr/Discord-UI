@@ -11,13 +11,6 @@ import {MatDialog} from "@angular/material/dialog";
 })
 export class SousMenuChannelComponent implements OnInit{
 
-  listInfoBadgeGroupe:Array<any>=[
-    {title:"C1",picto:"people", indexInfo : 1},
-    {title:"C2",picto:"people", indexInfo :2},
-    {title:"C3",picto:"people", indexInfo : 3},
-    {title:"C4",picto:"people", indexInfo : 4}
-  ]
-
   urlChannelSelected = '/home/admin/option/smc/channel?id='
   giveIndexBadgeSelected?:number;
 
@@ -28,9 +21,9 @@ export class SousMenuChannelComponent implements OnInit{
     this.channelService.getAllChannel()
   }
 
-  async getIndexBadgeSelected(index:number,indexInfo:number) {
-    this.giveIndexBadgeSelected = index+1
-    await this.router.navigateByUrl(this.urlChannelSelected + this.giveIndexBadgeSelected)
+   getIndexBadgeSelected(index:number,indexInfo:number) {
+      this.giveIndexBadgeSelected = index+1
+      this.router.navigateByUrl!(this.urlChannelSelected + indexInfo)
   }
 
   // BACK GROUND VIEW
