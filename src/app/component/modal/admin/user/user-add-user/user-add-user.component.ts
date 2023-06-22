@@ -35,6 +35,7 @@ export class UserAddUserComponent {
     groupe: ["", []],
   })
 
+
   // CHANNEL
   optionsChannel: string[] = ['C1', 'C2', 'C3'];
   selectedChannel?:string;
